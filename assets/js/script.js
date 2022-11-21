@@ -88,13 +88,21 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+//Function to make the slider work  
+
+var slider = document.getElementById('mySlider');
+var output = document.getElementById('passCLenght');
+
+output.innerHTML = slider.value;
+slider.oninput = function (){
+  output.innerHTML = this.value;
+}
+
+
 // Function to prompt user for password options
 function getPasswordOptions() {
-  var passlenght = prompt('How many characteres do you want the password to be - Please choose a number between 10 and 64')
-  if (passlenght > 64 || passlenght < 10){
-    alert ('Password must be between 10 and 64 characteres');
-   return getPasswordOptions()
-  }
+  var passlength = output.innerHTML;
+  console.log(passlength);
 
   var passSC = confirm('Do you want to use special characters');
   var passNum = confirm('Do you want to use numbers');
@@ -105,7 +113,7 @@ function getPasswordOptions() {
     getPasswordOptions();
   } 
   return{
-    passlenght:passlenght, 
+    passlenght:passlength, 
     passSC:passSC, 
     passNum:passNum, 
     passLC:passLC, 
