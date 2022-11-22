@@ -98,17 +98,35 @@ slider.oninput = function (){
   output.innerHTML = this.value;
 }
 
+//Enable Generate password button if checkbox checked
+// function checkboxState() {
+//   document.querySelectorAll('.checkbox').click(function(){
+//       $('.delete').prop('disabled',$('input.checkbox:checked').length == 0);
+//   }
+// }
+
+// var checkboxState = document.querySelectorAll('.checkbox');
+
+// myFunction(){
+//   document.querySelector('#generate').disabled = false;
+// }
+// document.querySelectorAll('.checkbox').addEventListener("click", myFunction);
+
+
+// console.log(checkboxState);
+
+
 
 // Function to ask the user for password options
 function getPasswordOptions() {
   var passlength = output.innerHTML;
-  console.log(passlength);
 
   var passSC = document.getElementById('passSC').checked;
   var passNum = document.getElementById('passNUM').checked;
   var passLC = document.getElementById('passLC').checked;
   var passUC = document.getElementById('passUC').checked;
 
+  console.log(passUC);
   return{
     passlenght:passlength, 
     passSC:passSC, 
