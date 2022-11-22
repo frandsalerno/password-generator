@@ -99,19 +99,16 @@ slider.oninput = function (){
 }
 
 
-// Function to prompt user for password options
+// Function to ask the user for password options
 function getPasswordOptions() {
   var passlength = output.innerHTML;
   console.log(passlength);
 
-  var passSC = confirm('Do you want to use special characters');
-  var passNum = confirm('Do you want to use numbers');
-  var passLC = confirm('Do you want to use lowercase characters');
-  var passUC = confirm('Do you want to use uppercase characters');
-  if (!passLC && !passNum && !passSC && !passUC){
-    alert('You need to choose at least one option');
-    getPasswordOptions();
-  } 
+  var passSC = document.getElementById('passSC').checked;
+  var passNum = document.getElementById('passNUM').checked;
+  var passLC = document.getElementById('passLC').checked;
+  var passUC = document.getElementById('passUC').checked;
+
   return{
     passlenght:passlength, 
     passSC:passSC, 

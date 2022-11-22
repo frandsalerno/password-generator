@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/toggle.css">
   </head>
   <body>
     <div class="wrapper">
@@ -19,7 +20,38 @@
         <div class="card-body">
           <div class="slidecontainer">
             <input type="range" min="10" max="64" value="" class="slider" id="mySlider">
-            <p>Your password length: <span id='passCLenght'></span></p>
+            <p>Your password length: <span id='passCLenght'></span> characters</p>
+          </div>
+
+          <div class="toggle-container">
+            <div class="toggle-sc">
+              <p>Include special characters</p>
+              <label class="switch">
+                <input type="checkbox" id='passSC'>
+                <span class="slider-toggle round"></span>
+              </label>
+            </div>
+            <div class="toggle-sc">
+              <p>Include numbers</p>
+              <label class="switch">
+                <input type="checkbox" id='passNUM'>
+                <span class="slider-toggle round"></span>
+              </label>
+            </div>
+            <div class="toggle-sc">
+              <p>Include lower case characters</p>
+              <label class="switch">
+                <input type="checkbox" id='passLC'>
+                <span class="slider-toggle round"></span>
+              </label>
+            </div>
+            <div class="toggle-sc">
+              <p>Include upper case characters</p>
+              <label class="switch">
+                <input type="checkbox" id='passUC'>
+                <span class="slider-toggle round"></span>
+              </label>
+            </div>
           </div>
 
           <textarea
