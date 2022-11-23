@@ -99,22 +99,30 @@ slider.oninput = function (){
 }
 
 //Enable Generate password button if checkbox checked
-// function checkboxState() {
-//   document.querySelectorAll('.checkbox').click(function(){
-//       $('.delete').prop('disabled',$('input.checkbox:checked').length == 0);
-//   }
-// }
 
-// var checkboxState = document.querySelectorAll('.checkbox');
+ var generateBtn = document.getElementById('generate');
+ var cb = document.querySelectorAll('.checkbox');
 
-// myFunction(){
-//   document.querySelector('#generate').disabled = false;
-// }
-// document.querySelectorAll('.checkbox').addEventListener("click", myFunction);
+// console.log(cb[1].checked);
 
-
-// console.log(checkboxState);
-
+for(i=0; i < cb.length; i++){
+  cb[i].addEventListener("change", (e) => {
+    if (e.target.checked) {
+      console.log("Checkbox is checked..");
+     generateBtn.disabled = false;
+    } else{
+        for (j=0; j < cb.length; j++){
+          if (cb[j].checked){
+            generateBtn.disabled = false;
+            console.log('any checked');
+          }
+          else{
+            generateBtn.disabled = true;
+          }
+        }
+    }
+  });
+}
 
 
 // Function to ask the user for password options
