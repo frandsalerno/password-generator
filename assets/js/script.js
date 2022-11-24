@@ -103,24 +103,20 @@ slider.oninput = function (){
  var generateBtn = document.getElementById('generate');
  var cb = document.querySelectorAll('.checkbox');
 
-// console.log(cb[1].checked);
 
 for(i=0; i < cb.length; i++){
   cb[i].addEventListener("change", (e) => {
-    if (e.target.checked) {
-      console.log("Checkbox is checked..");
-     generateBtn.disabled = false;
-    } else{
+      var anyCb = false; 
         for (j=0; j < cb.length; j++){
           if (cb[j].checked){
-            generateBtn.disabled = false;
-            console.log('any checked');
-          }
-          else{
-            generateBtn.disabled = true;
+            anyCb = true;
           }
         }
-    }
+      if(anyCb){
+        generateBtn.disabled = false;
+      }else{
+        generateBtn.disabled = true;
+      }
   });
 }
 
