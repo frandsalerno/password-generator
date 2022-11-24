@@ -13,8 +13,9 @@ body,
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
 }
 
 .wrapper {
@@ -30,9 +31,15 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+header h1{
+  color: #2a2a2a;
+  font-size: 44px;
+  margin: 0;
+}
+
 .card {
   background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
+  border-radius: 5%;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
@@ -56,11 +63,31 @@ header {
   flex-wrap: wrap;
 }
 
+.slidecontainer{
+  width: 100%;
+  text-align: left;
+}
+
+.slidecontainer input{
+  width: 100%;
+}
+
+.toggle-container{
+  width: 100%;
+}
+
+.toggle-sc{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #EBEBEB;
+}
+
 .card-footer {
   text-align: center;
 }
 
-.card-footer::before {
+/* .card-footer::before {
   content: " ";
   display: block;
   width: 100%;
@@ -72,12 +99,12 @@ header {
   content: " ";
   display: block;
   clear: both;
-}
+} */
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
+  background-color: #0171FF;
+  border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
@@ -88,12 +115,13 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .btn-copy{
   border: none;
-  background-color: rgb(94, 168, 228);
-  border-radius: 25px;
+  background-color: #ACACAC;
+  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
@@ -126,18 +154,23 @@ button[disabled] {
   border: none;
   display: block;
   width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
+  padding: 40px 15px 15px 15px;
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 10px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
+  margin-top: 5%;
+  border-radius: 20px;
   resize: none;
   overflow: hidden;
+  background: #F5F5F5;
+  border: none !important;
+  font-family: 'Quicksand', sans-serif;
+  color: #2a2a2a;
+  &[aria-label="true"]{
+    color: #2a2a2a;
+  }
 }
+
+
 
 @media (max-width: 690px) {
   .btn {
