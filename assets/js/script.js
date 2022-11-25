@@ -215,7 +215,7 @@ function copyPass() {
   
   // Alert the copied text
   // then alert('Your new password has been copied to the clipboard');
-  copyPassword.style.backgroundColor = '#5ee47f';
+  copyPassword.style.backgroundColor = 'rgb(26 191 67)';
   copyPassword.innerHTML=('Password copied');
 }
 

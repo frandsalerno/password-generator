@@ -36,11 +36,11 @@
   }
   
   input:checked + .slider-toggle {
-    background-color: #2196F3;
+    background-color: #0171FF;
   }
   
   input:focus + .slider-toggle {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #0171FF;
   }
   
   input:checked + .slider-toggle:before {
@@ -51,7 +51,7 @@
   
   /* Rounded sliders */
   .slider-toggle.round {
-    border-radius: 34px;
+    border-radius: 13px;
   }
   
   .slider-toggle.round:before {
