@@ -205,7 +205,6 @@ generateBtn.addEventListener('click', writePassword);
 function copyPass() {
   // Get the text field
   var copyText = document.getElementById('password');
-  console.log(copyText.value);
   // Select the text field
   copyText.select();
   copyText.setSelectionRange(0, 99999); // For mobile devices
@@ -219,5 +218,12 @@ function copyPass() {
   copyPassword.innerHTML=('Password copied');
 }
 
-//Add event listener to copy password
-// copyPassword.addEventListener('click', copyPass);
+//Copy text transition
+
+// var copyAlert = document.getElementById('copy-alert');
+// document.getElementById('copy-icon').onclick = function()
+// {
+//   copyAlert.classList.toggle('fade');
+//   // copyAlert.classList.toggle('fade'); 
+// }
+
