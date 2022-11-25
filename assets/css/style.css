@@ -10,6 +10,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  
 }
 
 body {
@@ -19,19 +20,21 @@ body {
 }
 
 .wrapper {
-  padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
   background-image: url(https://frandsalerno.github.io/my_portfolio/assets/images/avatar.png);
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 header {
   text-align: center;
-  padding: 20px;
-  padding-top: 0px;
+  padding: 0;
   color: hsl(206, 17%, 28%);
 }
 
@@ -87,6 +90,66 @@ header h1{
   border-bottom: 0.5px solid #EBEBEB;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider-toggle:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider-toggle {
+  background-color: #0171FF;
+}
+
+input:focus + .slider-toggle {
+  box-shadow: 0 0 1px #0171FF;
+}
+
+input:checked + .slider-toggle:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider-toggle.round {
+  border-radius: 13px;
+}
+
+.slider-toggle.round:before {
+  border-radius: 50%;
+}
+
 
 .card-footer {
   text-align: center;
@@ -132,34 +195,7 @@ header h1{
 
 #copy-pass{
   display: none;
-  /* background-image: url('/Users/floryfran/bootcamp/challenges/week5challenge/password-generator/assets/img/copy.svg'); */
 }
-
-/* #copy-icon{
-  background-image: url("/assets/img/copy.svg");
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 45px;
-  left: 5px;
-}
-
-#copy-alert{
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  font-size: 12px;
-  color:rgb(26 191 67);
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-#copy-alert.fade{
-  opacity: 1;
-} */
 
 button[disabled] {
   cursor: default;
@@ -213,7 +249,7 @@ button[disabled] {
     font-size: 1rem;
   }
   .toggle-sc p {
-    max-width: 200px;
+    width: 150px;
   }
   .wrapper {
     background-image: none;

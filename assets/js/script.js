@@ -130,7 +130,6 @@ function getPasswordOptions() {
   var passLC = document.getElementById('passLC').checked;
   var passUC = document.getElementById('passUC').checked;
 
-  console.log(passUC);
   return{
     passlenght:passlength, 
     passSC:passSC, 
@@ -216,14 +215,8 @@ function copyPass() {
   // then alert('Your new password has been copied to the clipboard');
   copyPassword.style.backgroundColor = 'rgb(26 191 67)';
   copyPassword.innerHTML=('Password copied');
+  setTimeout(function(){
+    copyPassword.style.backgroundColor = '#ACACAC';
+    copyPassword.innerHTML=('Copy password');
+  }, 1500);
 }
-
-//Copy text transition
-
-// var copyAlert = document.getElementById('copy-alert');
-// document.getElementById('copy-icon').onclick = function()
-// {
-//   copyAlert.classList.toggle('fade');
-//   // copyAlert.classList.toggle('fade'); 
-// }
-
