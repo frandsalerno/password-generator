@@ -83,23 +83,15 @@ header h1{
   border-bottom: 0.5px solid #EBEBEB;
 }
 
+
 .card-footer {
   text-align: center;
 }
 
-/* .card-footer::before {
-  content: " ";
-  display: block;
+.newpasscontainer{
   width: 100%;
-  background: #e7e9eb;
-  height: 2px;
+  position: relative;
 }
-
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-} */
 
 .btn {
   border: none;
@@ -136,6 +128,7 @@ header h1{
 
 #copy-pass{
   display: none;
+  /* background-image: url('/Users/floryfran/bootcamp/challenges/week5challenge/password-generator/assets/img/copy.svg'); */
 }
 
 button[disabled] {
@@ -181,11 +174,15 @@ button[disabled] {
 
   #password {
     font-size: 1rem;
+    padding: 20px 5px;
   }
 }
 
 @media (max-width: 500px) {
   .btn {
-    font-size: 0.8rem;
+    font-size: 1rem;
+  }
+  .toggle-sc p {
+    max-width: 200px;
   }
 }
