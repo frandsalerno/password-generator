@@ -2,9 +2,11 @@
 
 ## Description
 This is a webapp to generate a random password based on certain variables defined by the user.
-It has been done with Vanilla JS, HTML and CSS. I have also created a chrome extension based on it that is currently under review.
+It has been done with Vanilla JS, HTML and CSS. 
 
 [Link to the live version](https://frandsalerno.github.io/password-generator/)
+
+[Link to the Chrome Extension](https://chrome.google.com/webstore/detail/password-generator/cdjpmglhekbbmlfgkpljilehmakhclph)
 
 ## Table of Contents:
 - [Screenshots](#screenshots)
