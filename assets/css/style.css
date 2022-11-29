@@ -226,9 +226,19 @@ button[disabled] {
   color: #2a2a2a;
 }
 
+.download-extension{
+    text-decoration: none;
+    color: #FFF;
+    position: absolute;
+    right: 180px;
+    bottom: 10px;
+}
 
 
 @media (max-width: 690px) {
+  .wrapper {
+    background-image: none;
+  }
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
@@ -238,6 +248,9 @@ button[disabled] {
   #password {
     font-size: 1rem;
     padding: 20px 5px;
+  }
+  .download-extension{
+    display: none;
   }
 }
 
